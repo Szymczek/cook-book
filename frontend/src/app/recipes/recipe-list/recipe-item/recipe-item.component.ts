@@ -12,7 +12,6 @@ export class RecipeItemComponent {
   @Input() recipe: Recipe;
   @Output() recipeSelected = new EventEmitter<void>(); 
     onSelectRecipe(){
-      console.log("recipeSelected!")
       this.recipeSelected.emit();
   }
 }

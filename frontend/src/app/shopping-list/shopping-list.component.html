@@ -1,6 +1,6 @@
 <div class="row p-2 m-2 border border-primary">
     <div class="col-md-4 p-2 m-2 border border-primary">
-        <app-shopping-edit></app-shopping-edit>
+        <app-shopping-edit (ingredientAdded)="onIngredientAdded($event)"></app-shopping-edit>
         <ul class="list-group">
             <a href="#" class="list-group-item" style="cursor: pointer" *ngFor="let ingredient of ingredients">{{ingredient.name}} ({{ingredient.amount}})</a>
         </ul>

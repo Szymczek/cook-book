@@ -17,7 +17,6 @@ export class RecipeListComponent {
   ];
 
   onRecipeSelected(recipe: Recipe) {
-    console.log("RecipeWasSelected!: " + recipe);
     this.recipeWasSelected.emit(recipe);
   }
 }
