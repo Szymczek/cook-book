@@ -6,12 +6,14 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { FooterComponent } from './footer/footer.component';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { ShoppingListService } from './shopping-list/services/shopping-list.service';
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, RecipesComponent, ShoppingListComponent, FooterComponent, CommonModule, DropdownDirective],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  providers: [ShoppingListService]
 })
 export class AppComponent {
   loadedFeature: string = 'recipe';
