@@ -1,20 +1,21 @@
 <div class="">
-    <div class="row">
-        <div class="col">
-            <button class="btn btn-success p-2 mt-2">
-                New Recipe
-            </button>
-        </div>
+  <div class="row">
+    <div class="col">
+      <button 
+      class="btn btn-success p-2 mt-2" 
+      routerLinkActive="active"
+      routerLink="/recipes/new">New Recipe</button>
     </div>
-    <hr>
-    <div class="row">
-        <div class="col">
-            <app-recipe-item 
-            *ngFor="let recipeElement of recipes" 
-            [recipe]="recipeElement"
-            >
-            </app-recipe-item>
-        </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col">
+      <app-recipe-item
+        *ngFor="let recipeElement of recipes; let i = index"
+        [recipe]="recipeElement"
+        [index]="i"
+      >
+      </app-recipe-item>
     </div>
-    
+  </div>
 </div>

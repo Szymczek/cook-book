@@ -10,14 +10,22 @@ import { ShoppingListService } from './shopping-list/services/shopping-list.serv
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, RecipesComponent, ShoppingListComponent, FooterComponent, CommonModule, DropdownDirective],
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    RecipesComponent,
+    ShoppingListComponent,
+    FooterComponent,
+    CommonModule,
+    DropdownDirective,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  providers: [ShoppingListService]
+  providers: [ShoppingListService],
 })
 export class AppComponent {
   loadedFeature: string = 'recipe';
-  onNavigate(feature: string){
+  onNavigate(feature: string) {
     this.loadedFeature = feature;
   }
 }
