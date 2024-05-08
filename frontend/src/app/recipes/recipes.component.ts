@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
-import { Recipe } from './recipe.model';
 import { CommonModule } from '@angular/common';
-import { RecipeService } from './services/recipe.service';
 import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-recipes',
@@ -11,7 +9,7 @@ import { RouterModule } from '@angular/router';
   imports: [RecipeListComponent, RecipeDetailComponent, CommonModule, RouterModule],
   templateUrl: './recipes.component.html',
   styleUrl: './recipes.component.css',
-  providers: [RecipeService]
+  providers: []
 })
 export class RecipesComponent implements OnInit{
 
