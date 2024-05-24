@@ -53,8 +53,8 @@
             class="dropdown-menu dropdown-menu-end dropdown-menu-dark"
             style="max-height: 200px; overflow-y: auto"
           >
-            <li><a class="dropdown-item item-selected" >Action</a></li>
-            <li><a class="dropdown-item item-selected" >Another action</a></li>
+            <li><a class="dropdown-item item-selected" (click)="onSaveData()">Save recipes</a></li>
+            <li><a class="dropdown-item item-selected" (click)="onFetchData()">Fetch recipes</a></li>
             <li><a class="dropdown-item item-selected" >Something else here</a></li>
           </ul>
         </li>

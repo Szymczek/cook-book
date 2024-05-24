@@ -6,17 +6,17 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-recipes',
   standalone: true,
-  imports: [RecipeListComponent, RecipeDetailComponent, CommonModule, RouterModule],
+  imports: [
+    RecipeListComponent,
+    RecipeDetailComponent,
+    CommonModule,
+    RouterModule,
+  ],
   templateUrl: './recipes.component.html',
   styleUrl: './recipes.component.css',
-  providers: []
 })
-export class RecipesComponent implements OnInit{
-
+export class RecipesComponent implements OnInit {
   constructor() {}
 
-  ngOnInit(): void {
-
-  }
-
+  ngOnInit(): void {}
 }

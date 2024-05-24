@@ -7,7 +7,6 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { FooterComponent } from './footer/footer.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListService } from './shopping-list/services/shopping-list.service';
-import { RecipeService } from './recipes/services/recipe.service';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -18,11 +17,11 @@ import { RecipeService } from './recipes/services/recipe.service';
     ShoppingListComponent,
     FooterComponent,
     CommonModule,
-    DropdownDirective,
+    DropdownDirective
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  providers: [ShoppingListService, RecipeService],
+  providers: [ShoppingListService],
 })
 export class AppComponent {
   loadedFeature: string = 'recipe';
