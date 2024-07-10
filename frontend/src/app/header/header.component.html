@@ -21,7 +21,7 @@
             routerLink="/home"
             >Home</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isAuthenticated">
           <a
             class="nav-link "
             routerLinkActive="active"
@@ -29,7 +29,15 @@
             >Recipes</a
           >
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="!isAuthenticated">
+          <a
+            class="nav-link "
+            routerLinkActive="active"
+            routerLink="/auth"
+            >Authenticate</a
+          >
+        </li>
+        <li class="nav-item" >
           <a
             class="nav-link "
             routerLinkActive="active"
@@ -37,8 +45,17 @@
             >Shopping List</a
           >
         </li>
+        <li class="nav-item" *ngIf="isAuthenticated">
+          <a
+            class="nav-link "
+            routerLinkActive="active"
+            routerLink="/home"
+            (click)="onLogout()"
+            >Logout</a
+          >
+        </li>
       </ul>
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto" *ngIf="isAuthenticated">
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
